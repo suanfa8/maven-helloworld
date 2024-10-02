@@ -38,7 +38,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         source: "target/*.jar"
-        target: "/root/github-action/suanfa8.jar"  # 服务器上的目标路径
+        target: "/root/github-action"  # 服务器上的目标路径
 
     - name: 第 4 步：在服务器上启动 SpringBoot 项目
       uses: appleboy/ssh-action@master
@@ -47,4 +47,4 @@ jobs:
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
-        script: nohup java -jar /root/github-action/suanfa8.jar > /dev/null 2>&1 &  # 启动SpringBoot
+        script: nohup java -jar /root/github-action/target/maven-helloworld-1.0-SNAPSHOT.jar > /dev/null 2>&1 &  # 启动SpringBoot

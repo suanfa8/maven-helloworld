@@ -8,10 +8,10 @@ public class HelloWorldController {
 
     // 测试 github action
 
-    // http://localhost:8080/hello
+    // http://localhost:40020/hello
     @RequestMapping("/hello")
     public String hello() {
-        return "测试 github webhook";
+        return "测试 github action";
     }
 
 }

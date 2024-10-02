@@ -1,0 +1,13 @@
+name: Hello World Action
+
+on: [push]  # 触发条件，这里设置为每次push到仓库时执行
+
+jobs:
+  build:  # 定义一个作业
+    runs-on: ubuntu-latest  # 运行在最新的Ubuntu虚拟机上
+    steps:
+    - name: Print Hello World
+      run: echo "Hello World"
+
+    - name: Visit URL and Print Response
+      run: curl https://zkd-api.suanfa8.com/api/hello/world

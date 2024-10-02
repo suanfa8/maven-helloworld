@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    // 测试 github webhook
+    // 测试 github action
 
     // http://localhost:8080/hello
     @RequestMapping("/hello")
